@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basicwebapi-aspnetcore-deployment
+spec:
+  selector:
+    matchLabels:
+      app: basicwebapi-aspnetcore-pod
+  template:
+    metadata:
+      labels:
+        app: basicwebapi-aspnetcore-pod
+    spec:
+      containers:
+      - name: basicwebapi-aspnetcore-container
+        image: pdusek01.azurecr.io/basicwebapi-aspnetcore:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
