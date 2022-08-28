@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: basicwebapi-aspnetcore-container
-        image: pdusek01.azurecr.io/basicwebapi-aspnetcore:v1
+        image: dusekpe01.azurecr.io/basicwebapi-aspnetcore:v1
         resources:
           limits:
             memory: "128Mi"
